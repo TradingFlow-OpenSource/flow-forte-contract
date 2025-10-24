@@ -1,0 +1,31 @@
+{
+  "name": "flowforte-scheduler",
+  "version": "1.0.0",
+  "description": "FlowForte Scheduler - Automated trading with Scheduled Transactions and Flow Actions",
+  "main": "index.js",
+  "scripts": {
+    "schedule:daily": "node examples/schedule-daily-swap.js",
+    "query:status": "node examples/query-task-status.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flow",
+    "blockchain",
+    "defi",
+    "scheduled-transactions",
+    "flow-actions",
+    "trading",
+    "automation"
+  ],
+  "author": "TradingFlow Team",
+  "license": "MIT",
+  "dependencies": {
+    "@onflow/fcl": "^1.12.2",
+    "@onflow/types": "^1.4.0",
+    "dotenv": "^16.5.0",
+    "ethers": "^6.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.1"
+  }
+}

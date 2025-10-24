@@ -1,0 +1,41 @@
+{
+  "contracts": {
+    "TradingScheduler": "./cadence/contracts/TradingScheduler.cdc",
+    "ScheduledSwapHandler": "./cadence/contracts/TradingScheduler.cdc"
+  },
+  "networks": {
+    "emulator": "127.0.0.1:3569",
+    "testnet": "access.devnet.nodes.onflow.org:9000",
+    "mainnet": "access.mainnet.nodes.onflow.org:9000"
+  },
+  "accounts": {
+    "emulator-account": {
+      "address": "f8d6e0586b0a20c7",
+      "key": "ae1b44c0f5e8f6992ef2348898a35e50a8b0b9684000da5e1a7b50cc5b8d8c0e"
+    },
+    "testnet-account": {
+      "address": "${FLOW_TESTNET_ADDRESS}",
+      "key": {
+        "type": "hex",
+        "index": 0,
+        "signatureAlgorithm": "ECDSA_P256",
+        "hashAlgorithm": "SHA3_256",
+        "privateKey": "${FLOW_TESTNET_PRIVATE_KEY}"
+      }
+    }
+  },
+  "deployments": {
+    "emulator": {
+      "emulator-account": [
+        "TradingScheduler",
+        "ScheduledSwapHandler"
+      ]
+    },
+    "testnet": {
+      "testnet-account": [
+        "TradingScheduler",
+        "ScheduledSwapHandler"
+      ]
+    }
+  }
+}
