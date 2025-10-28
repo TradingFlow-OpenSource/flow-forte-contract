@@ -4,9 +4,12 @@
   "description": "FlowForte Scheduler - Automated trading with Scheduled Transactions and Flow Actions",
   "main": "index.js",
   "scripts": {
+    "test": "node test-simple-schedule.js",
+    "test:simple": "node test-simple-schedule.js",
+    "test:mainnet": "node test-mainnet-simple.js",
+    "check": "node check-deployment.js",
     "schedule:daily": "node examples/schedule-daily-swap.js",
-    "query:status": "node examples/query-task-status.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "query:status": "node examples/query-task-status.js"
   },
   "keywords": [
     "flow",

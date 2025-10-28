@@ -7,6 +7,8 @@ yarn.lock
 .env
 .env.local
 .env.*.local
+.env.mainnet
+.env.testnet
 
 # Logs
 logs/

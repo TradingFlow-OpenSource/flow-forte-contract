@@ -1,41 +1,73 @@
 {
-  "contracts": {
-    "TradingScheduler": "./cadence/contracts/TradingScheduler.cdc",
-    "ScheduledSwapHandler": "./cadence/contracts/TradingScheduler.cdc"
-  },
-  "networks": {
-    "emulator": "127.0.0.1:3569",
-    "testnet": "access.devnet.nodes.onflow.org:9000",
-    "mainnet": "access.mainnet.nodes.onflow.org:9000"
-  },
-  "accounts": {
-    "emulator-account": {
-      "address": "f8d6e0586b0a20c7",
-      "key": "ae1b44c0f5e8f6992ef2348898a35e50a8b0b9684000da5e1a7b50cc5b8d8c0e"
-    },
-    "testnet-account": {
-      "address": "${FLOW_TESTNET_ADDRESS}",
-      "key": {
-        "type": "hex",
-        "index": 0,
-        "signatureAlgorithm": "ECDSA_P256",
-        "hashAlgorithm": "SHA3_256",
-        "privateKey": "${FLOW_TESTNET_PRIVATE_KEY}"
-      }
-    }
-  },
-  "deployments": {
-    "emulator": {
-      "emulator-account": [
-        "TradingScheduler",
-        "ScheduledSwapHandler"
-      ]
-    },
-    "testnet": {
-      "testnet-account": [
-        "TradingScheduler",
-        "ScheduledSwapHandler"
-      ]
-    }
-  }
+	"contracts": {
+		"BandOracleConnectors": {
+			"source": "",
+			"aliases": {
+				"testnet": "1a9f5d18d096cd7a"
+			}
+		},
+		"DeFiActions": {
+			"source": "",
+			"aliases": {
+				"testnet": "4c2ff9dd03ab442f"
+			}
+		},
+		"EVM": {
+			"source": "",
+			"aliases": {
+				"testnet": "8c5303eaa26202d6"
+			}
+		},
+		"FlowTransactionScheduler": {
+			"source": "",
+			"aliases": {
+				"testnet": "8c5303eaa26202d6"
+			}
+		},
+		"ScheduledSwapHandler": "./cadence/contracts/ScheduledSwapHandler.cdc",
+		"TradingScheduler": "./cadence/contracts/TradingScheduler.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "ae1b44c0f5e8f6992ef2348898a35e50a8b0b9684000da5e1a7b50cc5b8d8c0e"
+		},
+		"mainnet-account": {
+			"address": "3a60e76275ee8a90",
+			"key": {
+				"type": "hex",
+				"signatureAlgorithm": "ECDSA_secp256k1",
+				"hashAlgorithm": "SHA2_256",
+				"privateKey": "2803d7a854948bdccff5bf8fe486325fd3bebc73296a86a7ab56b2b7c069f97d"
+			}
+		},
+		"testnet-account": {
+			"address": "e41ad2109fdffa04",
+			"key": "$FLOW_TESTNET_PRIVATE_KEY"
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"emulator-account": [
+				"TradingScheduler"
+			]
+		},
+		"mainnet": {
+			"mainnet-account": [
+				"ScheduledSwapHandler",
+				"TradingScheduler"
+			]
+		},
+		"testnet": {
+			"testnet-account": [
+				"ScheduledSwapHandler",
+				"TradingScheduler"
+			]
+		}
+	}
 }
