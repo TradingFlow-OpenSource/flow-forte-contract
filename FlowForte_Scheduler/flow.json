@@ -24,7 +24,39 @@
 				"testnet": "8c5303eaa26202d6"
 			}
 		},
+		"FlowTransactionSchedulerUtils": {
+			"source": "",
+			"aliases": {
+				"testnet": "8c5303eaa26202d6"
+			}
+		},
+		"FlowToken": {
+			"source": "",
+			"aliases": {
+				"testnet": "7e60df042a9c0868"
+			}
+		},
+		"FungibleToken": {
+			"source": "",
+			"aliases": {
+				"testnet": "9a0766d93b6608b7"
+			}
+		},
+		"SwapConnectors": {
+			"source": "",
+			"aliases": {
+				"testnet": "4c2ff9dd03ab442f"
+			}
+		},
+		"IncrementFiSwapConnectors": {
+			"source": "",
+			"aliases": {
+				"testnet": "4c2ff9dd03ab442f"
+			}
+		},
+		"IncrementFiSwapHandler": "./cadence/contracts/IncrementFiSwapHandler.cdc",
 		"ScheduledSwapHandler": "./cadence/contracts/ScheduledSwapHandler.cdc",
+		"SimpleSwapHandler": "./cadence/contracts/SimpleSwapHandler.cdc",
 		"TradingScheduler": "./cadence/contracts/TradingScheduler.cdc"
 	},
 	"networks": {
@@ -37,15 +69,6 @@
 			"address": "f8d6e0586b0a20c7",
 			"key": "ae1b44c0f5e8f6992ef2348898a35e50a8b0b9684000da5e1a7b50cc5b8d8c0e"
 		},
-		"mainnet-account": {
-			"address": "3a60e76275ee8a90",
-			"key": {
-				"type": "hex",
-				"signatureAlgorithm": "ECDSA_secp256k1",
-				"hashAlgorithm": "SHA2_256",
-				"privateKey": "2803d7a854948bdccff5bf8fe486325fd3bebc73296a86a7ab56b2b7c069f97d"
-			}
-		},
 		"testnet-account": {
 			"address": "e41ad2109fdffa04",
 			"key": "$FLOW_TESTNET_PRIVATE_KEY"
@@ -57,16 +80,11 @@
 				"TradingScheduler"
 			]
 		},
-		"mainnet": {
-			"mainnet-account": [
-				"ScheduledSwapHandler",
-				"TradingScheduler"
-			]
-		},
 		"testnet": {
 			"testnet-account": [
+				"TradingScheduler",
 				"ScheduledSwapHandler",
-				"TradingScheduler"
+				"IncrementFiSwapHandler"
 			]
 		}
 	}
